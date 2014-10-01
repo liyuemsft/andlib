@@ -1,38 +1,25 @@
-package com.example.liyue.andlib;
+package com.exampleee.mymodule.app2;
 
 import android.app.Activity;
-import android.content.Intent;
+import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-
-import com.exampleee.mymodule.app2.SubMainActivity;
 
 
-public class MyActivityAndLib extends Activity {
+public class SubMainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_activity_and_lib);
-        Button button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplication(), SubMainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                getApplication().startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_sub_main);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.my_activity_and_lib, menu);
+        getMenuInflater().inflate(R.menu.sub_main, menu);
         return true;
     }
 
